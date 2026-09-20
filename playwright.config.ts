@@ -40,7 +40,6 @@ export default defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         baseURL: 'https://coffee-cart.app',
-        testIdAttribute: 'data-test',
       },
     },
     {
