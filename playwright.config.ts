@@ -43,12 +43,11 @@ export default defineConfig({
       },
     },
     {
-      name: 'aria-practice',
-      testDir: './tests/aria-practice',
+      name: 'coffee-cart-css',
+      testDir: './tests/coffee-cart-css',
       use: {
         ...devices['Desktop Chrome'],
         baseURL: 'https://coffee-cart.app',
-        testIdAttribute: 'data-test',
       },
     }
 
