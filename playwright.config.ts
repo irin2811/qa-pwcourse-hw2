@@ -35,9 +35,22 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'coffee-cart',
+      testDir: './tests/coffee-cart',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'https://coffee-cart.app',
+      },
     },
+    {
+      name: 'aria-practice',
+      testDir: './tests/aria-practice',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'https://coffee-cart.app',
+        testIdAttribute: 'data-test',
+      },
+    }
 
     // {
     //   name: 'firefox',
