@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('test empty cart page', async ({ page }) => {
-  await page.goto('https://coffee-cart.app'); 
+  await page.goto('/'); 
 
   await expect(page.getByRole('link', { name: 'Cart page' })).toContainText('cart (0)'); 
 
@@ -10,7 +10,7 @@ test('test empty cart page', async ({ page }) => {
 });
 
 test('test cart counter', async ({ page }) => {
-  await page.goto('https://coffee-cart.app/');
+  await page.goto('/');
 
   await expect(page.getByRole('link', { name: 'Cart page' })).toContainText('cart (0)');
   await page.locator('[data-test="Espresso"]').click();
@@ -18,7 +18,7 @@ test('test cart counter', async ({ page }) => {
 });
 
 test('test cart total two drinks', async ({ page }) => {
-  await page.goto('https://coffee-cart.app/');
+  await page.goto('/');
 
   await expect(page.locator('[data-test="checkout"]')).toBeVisible();
   await expect(page.locator('[data-test="checkout"]')).toContainText('Total: $0.00');
@@ -36,7 +36,7 @@ test('test cart total two drinks', async ({ page }) => {
 });
 
 test('test check payment', async ({ page }) => {
-  await page.goto('https://coffee-cart.app/');
+  await page.goto('/');
 
   await expect(page.locator('[data-test="checkout"]')).toBeVisible();
   await expect(page.locator('[data-test="checkout"]')).toContainText('Total: $0.00');
@@ -53,7 +53,7 @@ test('test check payment', async ({ page }) => {
 });
 
 test('test promo message', async ({ page }) => {
-  await page.goto('https://coffee-cart.app/');
+  await page.goto('/');
 
   await expect(page.locator('[data-test="checkout"]')).toContainText('Total: $0.00');
   await page.locator('[data-test="Espresso"]').click();
