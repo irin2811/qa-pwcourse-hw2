@@ -49,6 +49,14 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         baseURL: 'https://coffee-cart.app',
       },
+    },
+    {
+      name: 'coffee-cart-functions',
+      testDir: './tests/coffee-cart-functions',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'https://coffee-cart.app',
+      },
     }
 
     // {
